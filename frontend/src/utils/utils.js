@@ -10,4 +10,14 @@
     //ex: 001, 002, 003 ... 010, 011 ...
 }
 
-module.exports =  {FirstLetterUppercase, FormatedNumber }
+
+const PorcentProgress = (number, max) =>{
+    let n = Number(number)
+
+    let porcent = n / max
+
+    return String(porcent * 100)
+
+}
+
+module.exports =  {FirstLetterUppercase, FormatedNumber, PorcentProgress }

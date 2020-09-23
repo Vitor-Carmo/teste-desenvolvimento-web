@@ -1,0 +1,28 @@
+#pokemon-show-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+#pokemon-show-container .grid-container{
+    display: grid;
+    grid-template-rows:  1fr 1fr;
+    grid-template-columns: 320px 1fr;
+    grid-template-areas: 
+        "Pokemon Table"
+        "Progress Table";
+}
+
+#pokemon-show-container .grid-container .pokemon{
+    grid-area: Pokemon;
+}
+
+#pokemon-show-container .grid-container .table_{
+    grid-area: Table;
+    padding: 0 14px;
+    
+}
+
+#pokemon-show-container .grid-container .progress_{
+    margin: 22px 0;
+    grid-area: Progress;
+}

@@ -32,6 +32,7 @@ const PokemonList = () => {
             {pokemonInfo.map(pokemon => (
                     <PokemonItem
                         key={ pokemon.id } 
+                        id = { pokemon.id }
                         name={ pokemon.name }
                         type1={ pokemon.type1 }
                         type2={pokemon.type2}

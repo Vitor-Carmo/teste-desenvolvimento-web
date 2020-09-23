@@ -3,20 +3,20 @@ import Type from '../Type/'
 import { FormatedNumber } from '../../utils/utils'
 import Trash from '../../assets/images/trash.svg'
 import Edit from '../../assets/images/edit.svg'
-
+import { Link } from 'react-router-dom'
 import './styles.css'
 
-function PokemonItem({ name, type1, type2, imageName }){
-
+function PokemonItem({ id, name, type1, type2, imageName }){
+    console.log(id)
 
     return(
 
         <div className="card p-2">
-            <a href="/">
+            <Link to={id?`/pokemon/${ id }` :'/'}>
                 <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${ FormatedNumber(imageName) }.png`} 
                     className="card-img-top img-fluid animation img" alt={ name }
                 />
-            </a>
+            </Link>
             
             <div className="card-body">
                 <h3 className="card-title">{ name }</h3>
