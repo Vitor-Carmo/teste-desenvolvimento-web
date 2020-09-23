@@ -1,0 +1,22 @@
+.header-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+img.img-logo + img.img-logo {
+    margin-bottom: 35px;
+}
+form{
+    width: 50%;
+}
+.search-pokemon{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.search-pokemon button{
+    margin-left: 10px;
+}

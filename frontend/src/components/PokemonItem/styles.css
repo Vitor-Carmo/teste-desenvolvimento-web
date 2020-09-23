@@ -1,0 +1,44 @@
+h3{
+    font-weight: bold;
+}
+
+
+.card {
+    width: 20rem;
+    height: auto;
+}
+
+
+.animation{
+    animation: float ease-in-out 2s infinite;
+}
+
+.types-pokemon {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.delete-update-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-top: 20px;
+}
+
+.delete-update-container img {
+    cursor: pointer;
+}
+
+@keyframes float{
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-5px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
