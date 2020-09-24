@@ -30,6 +30,11 @@ h3{
 .delete-update-container img {
     cursor: pointer;
 }
+.delete-update-container button{
+    background: none;
+    outline: none;
+    border: none;
+}
 
 @keyframes float{
     0% {

@@ -37,6 +37,7 @@ function PokemonShow(props){
                 <div className=" grid-container ">
                     <div className="pokemon">
                         <PokemonItem
+                            id = {thisPokemon.id }
                             name={thisPokemon.name}
                             type1={thisPokemon.type1}
                             type2={thisPokemon.type2}

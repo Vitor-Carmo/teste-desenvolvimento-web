@@ -5,8 +5,8 @@
     align-content: center;
 }
 
-img.img-logo + img.img-logo {
-    margin-bottom: 35px;
+img.img-logo  {
+    margin: 10px 0px  30px 0px;
 }
 form{
     width: 50%;

@@ -1,0 +1,21 @@
+#pokemon-create-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+#pokemon-create-container .container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#pokemon-create-container .container form{
+    padding: 50px;
+    border-radius: 8px;
+    border: solid 1px rgb(225, 225, 225);
+}
+
+#pokemon-create-container .container form h1{
+    margin-bottom: 20px;
+    font-weight: bold;
+}

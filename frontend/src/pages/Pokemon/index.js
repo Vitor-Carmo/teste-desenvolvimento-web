@@ -1,6 +1,7 @@
 import React from 'react'
 import PokemonList from '../../components/PokemonList'
 import Header from '../../components/Header'
+import { Link } from 'react-router-dom'
 
 import './styles.css'
 function Pokemon(){
@@ -16,6 +17,12 @@ function Pokemon(){
                         </button>
                     </div>
                 </form>
+                
+                <Link className="button" to="/create">
+                    <button className="btn btn-success">
+                        Create a new Pokémon! 
+                    </button>
+                </Link>
                 
                 
             </Header>

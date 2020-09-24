@@ -3,16 +3,36 @@ import Type from '../Type/'
 import { FormatedNumber } from '../../utils/utils'
 import Trash from '../../assets/images/trash.svg'
 import Edit from '../../assets/images/edit.svg'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+
+import api from '../../services/api'
+
 import './styles.css'
 
+
+
 function PokemonItem({ id, name, type1, type2, imageName }){
-    console.log(id)
+
+    const history = useHistory();
+
+    async function onDelete(){
+        
+        try {
+            const response  = await api.delete(`/pokemons/delete/${id}`)
+            alert(response.data.message)
+            history.push('/')
+        }catch(err){
+            alert('Erro ao tentar deletar o pokemon')
+            console.log(err)
+        }
+
+    }
+
 
     return(
 
         <div className="card p-2">
-            <Link to={id?`/pokemon/${ id }` :'/'}>
+            <Link to={`/pokemon/${ id }`}>
                 <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${ FormatedNumber(imageName) }.png`} 
                     className="card-img-top img-fluid animation img" alt={ name }
                 />
@@ -26,8 +46,13 @@ function PokemonItem({ id, name, type1, type2, imageName }){
                 </div>
 
                 <div className="delete-update-container">
+                <Link to={`/update/${ id }`}>
                     <img src={ Edit } alt="Deletar" width={ 38 }/>
+                </Link>
+                <button onClick={ onDelete }>
                     <img src={ Trash } alt="Deletar" width={ 38 }/>
+                </button>
+                    
                 </div>
                 
             </div>
@@ -42,6 +67,3 @@ function PokemonItem({ id, name, type1, type2, imageName }){
 
 
 export default PokemonItem
-
-
-//https://assets.pokemon.com/assets/cms2/img/pokedex/detail/386-defense.png

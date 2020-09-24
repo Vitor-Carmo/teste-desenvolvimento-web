@@ -25,7 +25,6 @@ const PokemonList = () => {
 
     }, [])
 
-    console.log(pokemonInfo)
     return(
         <div className="container grid p-5 ">
 

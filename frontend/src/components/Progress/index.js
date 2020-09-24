@@ -18,7 +18,7 @@ function Progress({ data }) {
                     </div>
                     
                     <h4>Attack</h4>
-                    <div class="progress">
+                    <div className="progress">
                         <div role="progressbar" className="progress-bar bg-danger progress-bar-striped progress-bar-animated" aria-valuenow="118" aria-valuemin="0" aria-valuemax="1000" style={{width: `${PorcentProgress(data.atk, 1000)}%` }}>
 
                             { data.atk }

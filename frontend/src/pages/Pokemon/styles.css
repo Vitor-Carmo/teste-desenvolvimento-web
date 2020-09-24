@@ -2,3 +2,8 @@
     width: 100vw;
     height: 100vh;
 }
+
+#pokemon a.button{
+    margin: 45px 0;
+    text-decoration: none;
+}
