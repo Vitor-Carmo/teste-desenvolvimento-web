@@ -8,6 +8,8 @@ module.exports = {
         mysql.getConnection((err, conn) => {
             if(err){ return res.status(500).send({ error: err }) }
 
+            
+            
             conn.query(
                 'SELECT * from Pokemon',
                 (err, response, fields) =>{
@@ -90,7 +92,24 @@ module.exports = {
                 }
             )
         })
-    }
+    },
+
+    searchFilterByName(req, res) {
+        mysql.getConnection((err, conn) => {
+            if(err){ return res.status(500).send({ error : err }) }
+
+
+            const sql = `SELECT * FROM Pokemon WHERE name LIKE '%${ req.query.name }%'`
+            conn.query(
+                sql,
+                (err, response, field) => {
+                    if(err){ return res.status(500).send({ error: err }) }
+                    
+                    return res.status(200).send( { length: response.length, data: response, sql:sql } )
+                }                
+            )
+        })
+    },
 
 
 }

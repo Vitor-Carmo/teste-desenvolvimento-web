@@ -1,0 +1,12 @@
+#pokemon-search{
+    width: 100vw;
+    height: 100vh;
+}
+
+#pokemon-search h1{
+    padding: 10px;
+    background-color: #602F75;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}

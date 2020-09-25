@@ -7,3 +7,15 @@
     margin: 45px 0;
     text-decoration: none;
 }
+#pokemon .change-page-container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+
