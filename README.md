@@ -1,58 +1,72 @@
-# Teste de Desenvolvimento Web
-
-Olá Dev! Tudo bem?
-
-A RedFox está sempre em busca de profissionais interessantes e interessados, com boa capacidade de aprendizado, adaptação e principalmente motivação!
-
-Este teste tem como objetivo avaliar e desafiar você. Não é obrigatório realizá-lo completamente, queremos apenas conhecer você, seu esforço e potencial para aprender, se adaptar e tomar decisões.
-
-Agora vamos ao teste!
 
 
-## Desafio Pokémon
+<div align="center" >
+    <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQEHHYJW7nQBWg/company-logo_200_200/0?e=1609372800&v=beta&t=Cxw_LhyP0Cstj50FeXl_AvGO_Ng9ErXpjtFNjzSUjR8"/>
+</div>
 
-Nós temos um problema, atualmente nosso sistema é só um excel, cheio de informações sobre Pokémon. Nós usamos ele como banco de dados e ao mesmo tempo interface de gerenciamento, inserindo, editando, deletando e filtrando os dados.
+
+
+# Desafio Pokemon
+A missão é criar um sistema para substituir este excel, pois queremos expandir e acrescentar funcionalidades. Queremos manter o básico, mas principalmente queremos uma forma prática e agradável de buscar os dados, com listagem, filtros, paginação e detalhes sobre cada Pokémon.
 
 A missão é criar um sistema para substituir este excel, pois queremos expandir e acrescentar funcionalidades. Queremos manter o básico, mas principalmente queremos uma forma prática e agradável de buscar os dados, com listagem, filtros, paginação e detalhes sobre cada Pokémon.
 
-Fique à vontade com o layout, precisamos de uma interface que consiga entregar as funcionalidades principais e substituir o excel, só isso.
+## Funcionalidades
 
 
-## Consigo fazer tudo isso?
+* ### Frontend
+    * Tela Principal que lista todos os pokémons
 
-Consegue sim!
+    * Tela que mostra os dados de um pokémon específico
 
-O teste é flexível, você pode escolher alguma parte específica dele para fazer, em que se sinta mais confortável e confiante, por exemplo: a interface, as funcionalidades, o banco de dados, etc...O importante é tentar atingir o objetivo de alguma forma.
+    * Tela para cadastrar um novo pokémon
 
-Aqui na RedFox queremos aproveitar ao máximo suas habilidades e aptidões, mas também desafiar você a adquirir novas, então nossa equipe tem a liberdade de trasitar entre frontend, backend, infraestrutura, etc...Sem se restringir, tudo depende do esforço e vontade de cada um.
+    * Deletar um pokémon 
 
+    * Tela para mudar os dados de um pokémon
 
-## Por onde começo?
+    * Funcionalidade de pesquisar um pokémon pelo nome
 
-Primeiramente, você pode fazer um fork desse repositório aqui, para sua conta do Github, depois disso crie uma branch nova com o seu nome, para podermos indentificá-lo.
+* ### Backend 
+    * `list` : Rota feita para listar todos os dados dos Pokémons
+    * `show` : Rota feita para detalhar informações de um Pokémon.
+    * `create` : Rota feita para cadastrar novos Pokémons.
+    * `update` : Rota feita para atualização de informações dos Pokémons.
+    
+    * `delete` : Rota feita para deletar Pokémons.
 
-Após terminar o desafio, você pode solicitar um pull request para a branch master do nosso repositório. Vamos receber e fazer a avaliação de todos.
-
-
-## E o Layout??
-
-Fique a vontade quanto a isso, não vamos avaliar o design da sua interface. Se quiser desenhar algo bacana, diferente, pensar até em UI/UX, etc...é claro que vamos valorizar o seu esforço e considerar como um diferencial, mas não se preocupe. 
-
-
-## Regras
-
-Para o desafio ficar mais interessante, decidimos criar algumas regras:
-- No layout, deve utilizar algum framework CSS (ex: Bootstrap, MaterializeCSS, Bulma...)
-- No frontend, deve utilizar algum framework JS (ex: VueJS, ReactJS, Angular...tente não usar jQuery)
-- No backend, deve utilizar NodeJS
-- Documentar um pouco o projeto, o que você fez e de que forma devemos executar-lo
+    * `searchFilterByName` : Rota Feita para Filtrar os pokémons pelo nome
 
 
-## Só isso?
 
-Só!...mas se quiser ir além, tente preparar o projeto para ser executado de maneira simples e prática, se coloque no lugar de alguém com menos conhecimentos, que precisa ver o que você desenvolveu. 
+## Como executar o Projeto
 
-ps: Se fizer deploy em algum servidor ou utilizar alguma ferramenta que facilite a execução (ex: docker), será um diferencial.
+### Banco de dados 
+Primeiro, Você precisa importar o Banco de dados para o **MySql**. Para tal só utlizar o arquivo `PokemonDatabase.sql`. Nele estão todos os dados do banco de dados.
 
 
-Boa sorte! (^_^)
+### Backend
+O backend dessa aplicação foi feita com NodeJs
+
+Para instalar as depêndencias do projeto excecute o seguinte comando:
+
+```
+npm install
+```
+
+Após executar esse comando, execute `npm start` para rodar localmente o projeto
+
+Ele estará rodando na porta `3001`
+
+### Frontend
+O Frontend da aplicação foi feita com o framework ReactJs, Html e Css
+
+Para instalar as depêndencias só usar o seguinte comando:
+```
+yarn install
+```
+
+Após executar esse comando, execute `yarn start` para rodar localmente o projeto
+
+Ele estará rodando na porta `3000`
+___
